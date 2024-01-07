@@ -49,7 +49,7 @@ useEffect (function(){
 
 <form style={{display:'flex',flexDirection:'row',justifyContent:'center',color:'lightblue'}}>
   
-       <h4><input  type="radio" readOnly/> {questions[currentIndex].correctAnswer}<br/></h4>
+       <h4><input  type="radio"/> {questions[currentIndex].correctAnswer}<br/></h4>
        <h4><input type="radio"/>{questions[currentIndex].incorrectAnswers[0]}<br/></h4>
        <h4><input type="radio"/>{questions[currentIndex].incorrectAnswers[1]}<br/></h4>
        <h4><input type="radio"/>{questions[currentIndex].incorrectAnswers[2]}<br/><br/></h4>
