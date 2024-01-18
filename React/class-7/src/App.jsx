@@ -6,6 +6,7 @@ function App() {
 
   let [city,setcity] = useState('')
   let [input,setinput] = useState('')
+  let [weather , setweather] = useState()
 
   function inp(e){
     setinput(input = e.target.value)
@@ -22,8 +23,10 @@ setcity(city = data)
   function getApi(){
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=2dbeb6cf7122de03e8ff27037f9585bf`)
     .then(data => data.json())
-    .then(data => console.log(data))
+    .then(data => setweather(data))
   }
+
+  console.log(weather)
 
 useEffect(function(){
 
@@ -52,7 +55,6 @@ useEffect(function(){
       </header> */}
       <input type="text" name="" id="" onChange={inp} />
       <button onClick={search}>search</button>
-      
       
     </div>
   );
