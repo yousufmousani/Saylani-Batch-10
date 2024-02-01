@@ -7,14 +7,16 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Home from './Components/Home';
+import Navbar from './Components/Navbar/navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
   <Routes>
-<Route path='Home' element={<Home/>} />
-<Route  path='About' element={<About/>}/>
-<Route  path='Contact' element={<Contact/>}/>
+<Route path='/' element={<Navbar/>} />
+<Route path='Home' element={<Navbar><Home/></Navbar>} />
+<Route  path='About' element={<Navbar><About/></Navbar>}/>
+<Route  path='Contact' element={<Navbar><Contact/></Navbar>}/>
 <Route />
 
 
